@@ -1,0 +1,43 @@
+#!/bin/sh /etc/rc.common
+
+# Define START e STOP com números que especificam a ordem de execução dos scripts
+START=99
+STOP=10
+
+USE_PROCD=1
+PROG=/usr/bin/socat
+
+# Adiciona suporte para o comando 'service socat enable' e 'service socat disable'
+STARTUP_ENABLED=1
+
+start_service() {
+    config_load 'socat'
+    config_foreach start_socat_instance socat
+}
+
+start_socat_instance() {
+    local section="$1"
+    local enabled
+    local serialport
+    local networkport
+
+    config_get_bool enabled "$section" 'enable' '0'
+    config_get serialport "$section" 'serialport'
+    config_get networkport "$section" 'networkport'
+
+    if [ "$enabled" -eq 1 ]; then
+        procd_open_instance
+        procd_set_param command "$PROG" "$serialport" "TCP-LISTEN:$networkport,reuseaddr"
+        procd_set_param respawn
+        procd_close_instance
+    fi
+}
+
+stop_service() {
+    killall socat
+}
+
+restart() {
+    stop
+    start
+}

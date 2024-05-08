@@ -1,0 +1,59 @@
+﻿msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+"Language: pt_BR\n"
+"Last-Translator: Rafał Wabik (IceG) - Do fórum eko.one.pl\n"
+
+msgid "Socat Configuration"
+msgstr "Configuração do Socat"
+
+msgid "Configuration panel for socat."
+msgstr "Painel de configuração para o socat."
+
+msgid "Serial Port and Network Settings"
+msgstr "Configurações de Porta Serial e Rede"
+
+msgid "Serial Port"
+msgstr "Porta Serial"
+
+msgid "Baud Rate"
+msgstr "Taxa de Baud"
+
+msgid "Data Bits"
+msgstr "Bits de Dados"
+
+msgid "Parity"
+msgstr "Paridade"
+
+msgid "None"
+msgstr "Nenhum"
+
+msgid "Even"
+msgstr "Par"
+
+msgid "Odd"
+msgstr "Ímpar"
+
+msgid "Stop Bits"
+msgstr "Bits de Parada"
+
+msgid "Flow Control"
+msgstr "Controle de Fluxo"
+
+msgid "None"
+msgstr "Nenhum"
+
+msgid "Hardware (RTS/CTS)"
+msgstr "Hardware (RTS/CTS)"
+
+msgid "Software (XON/XOFF)"
+msgstr "Software (XON/XOFF)"
+
+msgid "Network Port"
+msgstr "Porta de Rede"
+
+msgid "Enable"
+msgstr "Ativar"
+
+msgid "Activate or deactivate the configuration"
+msgstr "Ativar ou desativar a configuração"
